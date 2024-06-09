@@ -21,4 +21,12 @@
 <url-pattern>/login</url-pattern>
 </servlet-mapping>
 
+<session-config>
+
+<cookie-config>
+	<name>SID</name> <!--Renaming JSESSSUINID To SID  -->
+</cookie-config>
+<tracking-mode>COOKIE</tracking-mode>
+</session-config>
+
 </web-app>

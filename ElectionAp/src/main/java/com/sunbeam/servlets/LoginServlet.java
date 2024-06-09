@@ -50,6 +50,8 @@ public class LoginServlet extends HttpServlet {
 				
 				if(user.getRole().equals("voter")) {
 					resp.sendRedirect("candlist");
+					//String reUrl =resp.encodeRedirectUrl("candlist");
+					//resp.sendRedirect(reUrl);
 					
 				}
 				else
