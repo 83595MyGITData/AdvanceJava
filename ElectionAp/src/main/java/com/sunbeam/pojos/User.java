@@ -26,6 +26,19 @@ public class User {
 		this.status = status;
 		this.role = role;
 	}
+	
+	public User(String firstName, String lastName, String email, String password, Date birth, int status,
+			String role) {
+	
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.password = password;
+		this.birth = birth;
+		this.status = status;
+		this.role = role;
+	}
+
 
 	public int getId() {
 		return id;

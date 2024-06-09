@@ -78,6 +78,16 @@ public class UserDaoImpl extends Dao implements UserDao {
 		} // stmt.close();
 	}
 
+	public int updatePasswordbyEmail(String email, String newPassword) throws Exception {
+		String sql = "UPDATE users SET password=? WHERE email=?";
+		try(PreparedStatement stmt = con.prepareStatement(sql)){
+			stmt.setString(1, newPassword);
+			stmt.setString(2, email);
+			int cnt = stmt.executeUpdate();
+			return cnt;
+		} // stmt.close();
+	}
+
 	public int updatePassword(int userId, String newPassword) throws Exception {
 		String sql = "UPDATE users SET password=? WHERE id=?";
 		try(PreparedStatement stmt = con.prepareStatement(sql)){

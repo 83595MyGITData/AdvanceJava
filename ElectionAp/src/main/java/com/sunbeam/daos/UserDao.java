@@ -17,5 +17,8 @@ public interface UserDao extends AutoCloseable {
 	int deleteById(int id) throws Exception;
 
 	int update(User user) throws Exception;
+	
+	int updatePasswordbyEmail(String email, String newPassword) throws Exception;
+
 
 }
