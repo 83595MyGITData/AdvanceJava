@@ -11,6 +11,8 @@
 <hr>
 <h1>Online Voting System</h1>
 <hr>
+<marquee>Announcement : ${Annlb.announce }</marquee>
+<hr>
 
 <jsp:useBean id="reslb" class="com.sunbeam.javabeans.CandidateListBean"></jsp:useBean>
 ${reslb.displayCandidate() }
@@ -44,6 +46,7 @@ ${reslb.displayCandidate() }
 </table>
 
 <br><br>
+<a href="announcement.jsp">Announcement</a>
 <a href="index.jsp">LogOut</a>
 
 </body>

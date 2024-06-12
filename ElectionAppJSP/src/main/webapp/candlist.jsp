@@ -12,14 +12,20 @@
 <h1>${initParam.Title}</h1>
 <hr>
 
-<jsp:useBean id="clb" class="com.sunbeam.javabeans.CandidateListBean"></jsp:useBean>
+<br>
+Hi, ${ lb.user.firstName }<br>
+<hr>
+<marquee>Announcement : ${Annlb.announce }</marquee>
+<hr>
+
+<jsp:useBean id="clb" class="com.sunbeam.javabeans.CandidateListBean" />
 
 ${ clb.displayCandidate() }
 
 <form method="post" action="vote.jsp">
 
 <c:forEach var="c" items="${clb.candList}">
-	<input type="radio" name="candidate" value="${c.id}"/>${c.name} - ${c.party} <br>
+	<input type="radio" name="id" value="${c.id}"/>${c.name} - ${c.party} <br>
 </c:forEach>
 
 <br><br>

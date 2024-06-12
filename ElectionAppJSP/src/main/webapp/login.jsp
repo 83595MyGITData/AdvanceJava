@@ -22,7 +22,7 @@ ${ lb.authenticate() }
 		<c:redirect url="candlist.jsp"/> 
 	</c:when>
 	<c:when test="${lb.user.role == 'admin'}">
-		<c:redirect url="result.jsp"/>
+		<jsp:forward page="result.jsp"/>
 	</c:when>
 </c:choose>
 

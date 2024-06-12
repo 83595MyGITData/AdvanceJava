@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<hr>
+<h1>Voting System</h1>
 <hr>
 
 <form method='post' action='register.jsp'>

@@ -10,13 +10,14 @@ public class VoteBeans {
 	private int id;
 	private int count;
 	private int status;
+	private int uid;
+	
 	public int getUid() {
 		return uid;
 	}
 	public void setUid(int uid) {
 		this.uid = uid;
 	}
-	private int uid;
 	public VoteBeans() {
 		// TODO Auto-generated constructor stub
 	}
@@ -34,8 +35,10 @@ public class VoteBeans {
 		{
 			count= canddao.incrementVote(id);
 			
-			if(count==1)
-			user.updateStatus(uid, true);
+			System.out.println("In castVote" );
+			//
+			//if(count==1)
+			//user.updateStatus(uid, true);
 					
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
