@@ -10,23 +10,16 @@ import com.sunbeam.entities.Category;
 import com.sunbeam.entities.Product;
 import static com.sunbeam.utils.HibernateUtil.getFactory;
 
-public class productTestor {
+public class getDiscountedProduct {
 
 	public static void main(String []args)
 	{
 		try(SessionFactory sf=getFactory()){
 		Scanner sc = new Scanner(System.in);
 		ProductDao prod=new ProductDaoImpl();
-//		System.out.println("Enter Category category, String productName, double price, int availQuantity");
-//		Product p=new Product(Category.valueOf(sc.next().toUpperCase()),sc.next(),sc.nextDouble(),sc.nextInt());
-//		prod.insertData(p);
 		
-//		System.out.println("Enter Product id:");
-//		Product p = prod.getDataByProdId(sc.nextLong());
-//		System.out.println(p);
-		
-//		System.out.println("Enter price Range:");
-//		System.out.println(prod.getDataBetweenDates(sc.nextDouble(), sc.nextDouble())+"\n");
+		System.out.println("Enter Category and Discount:" );
+		System.out.println(prod.getDiscountedProductsByPrice(Category.valueOf(sc.next().toUpperCase()),sc.nextDouble()));
 		}
 		catch(Exception e)
 		{

@@ -10,7 +10,7 @@ import com.sunbeam.entities.Category;
 import com.sunbeam.entities.Product;
 import static com.sunbeam.utils.HibernateUtil.getFactory;
 
-public class productTestor {
+public class GetProductByPricesRangeAndCategory {
 
 	public static void main(String []args)
 	{
@@ -25,8 +25,9 @@ public class productTestor {
 //		Product p = prod.getDataByProdId(sc.nextLong());
 //		System.out.println(p);
 		
-//		System.out.println("Enter price Range:");
-//		System.out.println(prod.getDataBetweenDates(sc.nextDouble(), sc.nextDouble())+"\n");
+		System.out.println("Enter price Range and  Category:" );
+		prod.getDataBetweenPriceAndCategory(sc.nextDouble(), sc.nextDouble(),Category.valueOf(sc.next().toUpperCase()))
+		.forEach(p->System.out.println(p));
 		}
 		catch(Exception e)
 		{
